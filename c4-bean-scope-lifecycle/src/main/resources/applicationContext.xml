@@ -9,7 +9,6 @@
     <bean id="myPrototypeTask"
           class="Task"
           scope="prototype"
-
     >
     </bean>
 </beans>
