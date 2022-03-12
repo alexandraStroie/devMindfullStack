@@ -7,7 +7,7 @@
     default-destroy-method="destroy"
 >
     <bean id="myPrototypeTask"
-          class="Task"
+          class="com.devmind.Task"
           scope="prototype"
     >
     </bean>

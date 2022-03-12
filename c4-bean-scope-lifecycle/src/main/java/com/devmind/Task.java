@@ -1,22 +1,27 @@
+package com.devmind;
+
+import java.util.Objects;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class Task {
     private String taskName;
     private Integer taskId = 0;
     private Integer executionTime;
-    private int numberOfTasks = 0;
+    private int numberOfTasks;
 
     public Task() {
+        System.out.printf("Sleep for %d seconds%n", this.executionTime);
         numberOfTasks++;
         System.out.println("Current number of instances/task is: " + numberOfTasks);
     }
 
     public void run() throws InterruptedException {
-        Thread.sleep(executionTime);
+        Thread.sleep(this.executionTime);
     }
 
     public Integer generateId() {
-        return taskId++;
+        return taskId;
     }
 
     public void setNumberOfTasks() {
@@ -28,12 +33,18 @@ public class Task {
     }
 
     private void init() {
+        if(Objects.isNull(numberOfTasks)) {
+            numberOfTasks = 0;
+        }
+        numberOfTasks++;
         System.out.println("This method is called at initialization");
-        generateId();
-        this.taskName = "Task" + taskId;
+        this.taskId = generateId();
+        this.taskName = "com.devmind.Task" + taskId;
 
         Random random = new Random();
-        this.executionTime = random.ints(1,20).findFirst().getAsInt();
+        this.executionTime = random.nextInt(1, 21);
+
+        System.out.printf("method init is called for %s, bean id is %d%n", this.taskName, this.taskId);
     }
 
     private void destroy() {
