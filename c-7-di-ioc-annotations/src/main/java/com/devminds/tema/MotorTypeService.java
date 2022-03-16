@@ -17,14 +17,14 @@ public class MotorTypeService {
     private int maxSpeed;
     private String type;
 
-    private Random random = new Random();
+    private static final Random random = new Random();
     private String typesOfMotors[] = {"electric", "benzina", "motorina"};
 
     public MotorTypeService(){
-        this.hp = random.nextInt(80,200);
-        this.maxSpeed = random.nextInt(0,300);
+        this.hp = random.nextInt(200);
+        this.maxSpeed = random.nextInt(300);
 
-        int r = random.nextInt(0,2);
+        int r = random.nextInt(2);
         this.type = typesOfMotors[r];
     }
 
