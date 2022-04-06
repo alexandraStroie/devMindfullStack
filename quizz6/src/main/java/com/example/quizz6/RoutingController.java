@@ -16,6 +16,10 @@ public class RoutingController {
     @GetMapping("/add/first/{first}/second/{second}")
     public ResponseEntity getSumForTwoVariables(@PathVariable String first, String second) {
         return  ResponseEntity.ok(mathService.sum(first,second));
+    }
 
+    @GetMapping("/addBigNrs/first/{first}/second/{second}")
+    public ResponseEntity getBigSumForTwoVariables(@PathVariable String first, String second) {
+        return  ResponseEntity.ok(mathService.sumBigNrs(first,second));
     }
 }
