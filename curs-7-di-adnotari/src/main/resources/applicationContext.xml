@@ -3,14 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="myPet1" class="com.devmind.myspringapp.AnimalName">
+    <bean id="myPet1" class="com.devmind.myspringapp.Cat">
         <constructor-arg ref="myAnimalName"/>
     </bean>
 
     <bean id="myPet2" class="com.devmind.myspringapp.Dog">
         <constructor-arg ref="myAnimalName"/>
     </bean>
-
 
     <bean id="myPet3" class="com.devmind.myspringapp.Mouse">
         <constructor-arg ref="myAnimalName"/>

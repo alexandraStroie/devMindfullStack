@@ -20,6 +20,8 @@ public class StartApp {
 
         System.out.println(pet1.animalName());
 
+        System.out.println(pet1.toString());
+
         context.close();
     }
 

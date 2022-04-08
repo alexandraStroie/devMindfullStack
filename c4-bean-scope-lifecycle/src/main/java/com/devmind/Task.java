@@ -2,7 +2,6 @@ package com.devmind;
 
 import java.util.Objects;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class Task {
     private String taskName;
@@ -11,13 +10,13 @@ public class Task {
     private int numberOfTasks;
 
     public Task() {
-        System.out.printf("Sleep for %d seconds%n", this.executionTime);
         numberOfTasks++;
         System.out.println("Current number of instances/task is: " + numberOfTasks);
     }
 
     public void run() throws InterruptedException {
-        Thread.sleep(this.executionTime);
+        Thread.sleep(this.executionTime * 1000);
+        System.out.printf("Sleep for %d seconds%n", this.executionTime);
     }
 
     public Integer generateId() {
@@ -33,9 +32,6 @@ public class Task {
     }
 
     private void init() {
-        if(Objects.isNull(numberOfTasks)) {
-            numberOfTasks = 0;
-        }
         numberOfTasks++;
         System.out.println("This method is called at initialization");
         this.taskId = generateId();

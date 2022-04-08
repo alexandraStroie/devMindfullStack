@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-@Import(MotorTypeService.class)
 public class Garaj {
 
     // DI field
@@ -22,8 +21,6 @@ public class Garaj {
 
     //DI constructor
     private Masina masina;
-
-    private MotorTypeService motorTypeService;
 
     private List<IAutomobil> carList;
 

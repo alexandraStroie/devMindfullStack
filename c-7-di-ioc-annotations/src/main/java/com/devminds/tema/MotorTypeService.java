@@ -17,7 +17,7 @@ public class MotorTypeService {
     private String type;
 
     private static final Random random = new Random();
-    private String typesOfMotors[] = {"electric", "benzina", "motorina"};
+    private String[] typesOfMotors = {"electric", "benzina", "motorina"};
 
     public MotorTypeService(){
         this.hp = random.nextInt(200);

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Masina implements IAutomobil{
 
-    private MotorTypeService motorTypeService;
+    private final MotorTypeService motorTypeService;
 
     @Autowired
     public Masina(MotorTypeService motorTypeService){
