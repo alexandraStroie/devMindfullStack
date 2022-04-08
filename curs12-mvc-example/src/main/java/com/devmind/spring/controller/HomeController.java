@@ -15,9 +15,6 @@ import com.devmind.spring.model.User;
 @Controller
 public class HomeController {
 
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		System.out.println("Home Page Requested, locale = " + locale);
@@ -35,6 +32,14 @@ public class HomeController {
 	public String user(@Validated User user, Model model) {
 		System.out.println("User Page Requested");
 		model.addAttribute("userName", user.getUserName());
+		model.addAttribute("email", user.getEmail());
+		model.addAttribute("phoneNumber", user.getPhoneNumber());
+		model.addAttribute("birthday", user.getBirthday());
 		return "user";
+	}
+
+	@RequestMapping(value = "/about", method = RequestMethod.GET)
+	public String about() {
+		return "about";
 	}
 }
