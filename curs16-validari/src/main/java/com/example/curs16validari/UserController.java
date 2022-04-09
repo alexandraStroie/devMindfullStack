@@ -11,10 +11,11 @@ import java.util.Map;
 @RestController
 public class UserController {
 
+    private UserService userService;
+
     @PostMapping("/register")
     public User handleRegister(@RequestBody User user) {
-        // TODO: Add business logic
-        return user;
+        userService
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
