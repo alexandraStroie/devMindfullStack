@@ -28,14 +28,14 @@ public class Ex1 {
                 new File("src/main/resources/course_details_array.json"),
                 new TypeReference<List<Course>>(){});
 
-        listCourse.forEach(x -> System.out.println(x.toString()));
+//        listCourse.forEach(x -> System.out.println(x.toString()));
 
 
         List<ProgrammingLangs> listProgrammingLang = objectMapper.readValue(
                 new File("src/main/resources/programmingLangs.json"),
                 new TypeReference<List<ProgrammingLangs>>(){});
 
-        listCourse.forEach(x -> System.out.println(x.toString()));
+        listProgrammingLang.forEach(x -> System.out.println(x.toString()));
 
     }
 }

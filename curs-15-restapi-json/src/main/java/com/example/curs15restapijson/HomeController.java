@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping()
 public class HomeController {
 
     private static final String API_KEY = "devmind-api-key";

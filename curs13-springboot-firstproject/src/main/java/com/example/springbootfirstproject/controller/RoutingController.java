@@ -29,6 +29,8 @@ public class RoutingController {
 
     private TimeService timeZoneService;
 
+    private static Faker faker = new Faker();
+
     @GetMapping(value="/time")
     public LocalDateTime currentHour(@RequestParam(name = "timeZone") String timeZone) {
         return timeZoneService.getTimeByZone(timeZone);
@@ -36,7 +38,6 @@ public class RoutingController {
 
     @GetMapping(value = "/harry-potter")
     public String getHarryPotter() {
-        Faker faker = new Faker();
         String name = faker.name().fullName();
         return name;
     }
