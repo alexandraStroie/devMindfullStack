@@ -7,7 +7,19 @@
 <title>User Home Page</title>
 </head>
 <body>
-<h3>Salut ${userName}</h3>
-<h3>Salut ${userName}</h3>
+<div class="container">
+    <h3>Hi ${username}</h3>
+    <p>User data:</p>
+    <dl class="row">
+        <dt class="col-sm-3">Email:</dt>
+        <dd class="col-sm-9">${email}</dd>
+
+        <dt class="col-sm-3">Phone number:</dt>
+        <dd class="col-sm-9">${phoneNumber}</dd>
+
+        <dt class="col-sm-3">Birthday:</dt>
+        <dd class="col-sm-9">${birthday}</dd>
+    </dl>
+</div>
 </body>
 </html>

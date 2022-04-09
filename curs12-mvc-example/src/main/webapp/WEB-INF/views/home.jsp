@@ -11,10 +11,31 @@
 
 	<P>Timpul pe server este: ${serverTime}.</p>
 
-<%--	acesta este un action form care inregistreaza un user name--%>
-	<form action="user" method="post">
-		<input type="text" name="userName"><br> <input
-			type="submit" value="Login">
-	</form>
+	<div class="row">
+		<form action="user" method="post">
+			<div class="col-lg-12 mb-3">
+				<label for="username" class="form-label">Username:</label>
+				<input type="text" name="username" id="username" class="form-control">
+			</div>
+
+			<div class="col-lg-12 mb-3">
+				<label for="email" class="form-label">Email:</label>
+				<input type="email" name="email" id="email" class="form-control">
+			</div>
+
+			<div class="col-lg-12 mb-3">
+				<label for="phoneNumber" class="form-label">Phone number:</label>
+				<input type="text" name="phoneNumber" id="phoneNumber" class="form-control">
+			</div>
+
+			<div class="col-lg-12 mb-3">
+				<label for="birthday" class="form-label">Birthday</label>
+				<input type="date" name="birthday" id="birthday" class="form-control">
+			</div>
+
+			<button type="submit" class="btn btn-primary">Login</button>
+		</form>
+	</div>
+
 </body>
 </html>
