@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
@@ -13,15 +12,7 @@ import javax.validation.constraints.Pattern;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
-
-    @NotNull(message = "firstName must be not-null")
-    @NotBlank
-    private String firstName;
-
-    @NotNull(message = "lastName must be not-null")
-    @NotBlank
-    private String lastName;
+public class LoginRequest {
 
     @NotNull(message = "email must be not-null")
     @Pattern(regexp = "^[A-Za-z0-9+_.-]+@(.+)$", message = "email must contain @ and .")
@@ -29,5 +20,5 @@ public class User {
 
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$",
             message = "password must have digit + lowercase + uppercase + punctuation + symbol")
-    private String password;;
+    private String password;
 }
